@@ -1,0 +1,14 @@
+<header id = "header">
+    <div id = "header-banner"></div>
+    <div id = "header-text">
+        <h1><%= config.title %></h1>
+        <h3><%= config.description %></h2>
+    </div>
+    <div id="nav">
+		<ul id = "nav-items">
+      <% for (name in theme.menu) { %>
+        <li><a href="<%- url_for(theme.menu[name]) %>" class="greyblock"><%= name %></a></li>
+      <% } %>
+		</ul>
+	</div>
+</header>

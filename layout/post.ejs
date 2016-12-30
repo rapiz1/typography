@@ -1,0 +1,16 @@
+<article class="post markdown-body">
+  <div class="post-title">
+    <h2 class="title"><%= page.title %></h2>
+  </div>
+   <div class="post-meta">
+         <% if (page.excerpt) {%>
+    <blockquote><%- page.excerpt %></blockquote>
+    <% } %>
+    <span class="post-author">By <%= config.author %></span>
+    <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
+
+  </div>
+  <div class="post-content">
+    <%- page.more %>
+  </div>
+</article>

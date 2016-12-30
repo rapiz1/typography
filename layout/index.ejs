@@ -1,0 +1,33 @@
+<section class="posts">
+  <% page.posts.each(function (post) { %>
+    <article class="index post">
+      <div class="index post-title">
+        <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        <span class="index post-excerpt"><%- post.excerpt %></span>
+      <span class="index post-time"><%- date(post.date, config.data_format) %></span>
+        <span class="index post-categories">
+          <%- list_categories(post.categories, {
+            show_count: false,
+            class: 'article-category',
+            style: 'none',
+            separator: ' '
+          }) %>
+        </span>
+        <span class="index post-tags">
+          <%- list_tags(post.tags, {
+            show_count: false,
+            class: 'article-tag',
+            style: 'none',
+            separator: ', '
+          }) %>
+        </span>
+        <div class="clear"></div>
+      </div>
+      <!--
+    <div class="post-meta">
+        <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
+      </div>
+    -->
+    </article>
+  <% }) %>
+</section>
