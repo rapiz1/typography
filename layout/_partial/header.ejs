@@ -6,8 +6,8 @@
     </div>
     <div id="nav">
 		<ul id = "nav-items">
-      <% for (name in theme.menu) { %>
-        <li><a href="<%- url_for(theme.menu[name]) %>" class="greyblock"><%= name %></a></li>
+      <% for (name in site.data.nav) { %>
+        <li><a href="<%- url_for(site.data.nav[name]) %>" class="greyblock"><%= name %></a></li>
       <% } %>
 		</ul>
 	</div>

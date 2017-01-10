@@ -30,8 +30,8 @@
 </style>
 <div class="portal-main">
   <ul>
-    <% for (name in site.data.portal.menu) { %>
-      <li><a href="<%= site.data.portal.menu[name] %>" target="_blank"><%= name %></a></li>
+    <% for (name in site.data.portal) { %>
+      <li><a href="<%= site.data.portal[name] %>" target="_blank"><%= name %></a></li>
     <% } %>
 </ul>
 </div>
