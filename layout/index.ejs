@@ -1,9 +1,18 @@
+<%- partial('_partial/banner') %>
+
 <section class="posts">
-  <% page.posts.each(function (post) { %>
-    <article class="index post">
+<div class="fanfouReminder seriffont index post underline-trans">
+<span id="fanfouButton">饭否<a><em>？</em></a></span>
+<script type="text/javascript">
+fanfou_name="rapiz";fanfou_count=5;fanfou_timeline="user";</script>
+<%- js('js/timeline.js') %>
+</div>
+  <% var first = true%>
+  <% page.posts.each(function (post) {%>
+    <article class="index post underline-trans">
       <div class="index post-title">
         <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
-        <span class="index post-excerpt"><%- post.excerpt %></span>
+        <span class="index post-excerpt"><%- post.excerpt %></p></span>
       <span class="index post-time"><%- date(post.date, config.data_format) %></span>
         <span class="index post-categories">
           <%- list_categories(post.categories, {
@@ -29,5 +38,12 @@
       </div>
     -->
     </article>
+
   <% }) %>
+  <% if (config.disqus_shortname) { %>
+      <!-- 文件分离和变量的使用，使代码能较好的兼容 Hexo 主配置 -->
+      <%- partial('_partial/disqus', {
+          shortname: config.disqus_shortname
+        }) %>
+  <% } %>
 </section>

@@ -1,14 +1,10 @@
 <header id = "header">
-    <div id = "header-banner"></div>
-    <div id = "header-text">
-        <h1><%= config.title %></h1>
-        <h3><%= config.description %></h2>
-    </div>
     <div id="nav">
-		<ul id = "nav-items">
+		<div id = "nav-items">
       <% for (name in site.data.nav) { %>
-        <li><a href="<%- url_for(site.data.nav[name]) %>" class="greyblock"><%= name %></a></li>
+        <div class="underline-trans"><a href="<%- url_for(site.data.nav[name]) %>" ><%= name %></a></div>
       <% } %>
 		</ul>
 	</div>
 </header>
+

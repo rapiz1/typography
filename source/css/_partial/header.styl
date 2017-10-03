@@ -6,6 +6,9 @@
     padding: 20;
     padding-bottom: 0;
 }
+#header-text h1 {
+  cursor: pointer;
+}
 #nav-items {
     list-style: none;
     margin: 0;
@@ -13,17 +16,31 @@
     display: -webkit-box;
     -webkit-box-orient: horizontal;
 }
-#nav-items li{
+#nav-items div{
     -webkit-box-flex: 1;
+    text-align:center
 }
-
-#nav-items li a {
-    display: block;
-    text-transform: uppercase;
-    text-align: center;
-    transition: background 0.5s;
+#nav-items a {
+    color:black
+    font-size:0.7em
+    text-transform: uppercase
 }
-#nav-items li a:hover {
-    background: grey;
-    color: lightgrey;
-}
+.underline-trans{
+            position: relative;
+            text-decoration: none;
+            color: #333;
+        }
+.underline-trans:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 100%;
+            background: black;
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+.underline-trans:hover:before{
+            transform: scale(1);
+        }

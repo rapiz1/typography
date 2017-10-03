@@ -13,25 +13,21 @@
       -webkit-box-flex: 1;
       height: 50px;
     }
-  .portal-main li a:hover {
-      color: lightgrey;
-      background: grey;
-    }
     .portal-main li a {
-      color: grey;
-      background: lightgrey;
+      color:black;
+      text-transform: uppercase;
       display: block;
       margin: auto;
       line-height: 50px;
       height: 50px;
       text-align: center;
-      transition: background 0.5s;
     }
 </style>
 <div class="portal-main">
   <ul>
     <% for (name in site.data.portal) { %>
-      <li><a href="<%= site.data.portal[name] %>" target="_blank"><%= name %></a></li>
+      <li><a href="<%= site.data.portal[name] %>" target="_blank" class="underline-trans"><%= name %></a></li>
     <% } %>
 </ul>
+<%- page.more %>
 </div>
