@@ -62,7 +62,7 @@ fanfou.Timeline.prototype = {
 		var date = this.getDate(obj.created_at);
 		stamp.appendChild(document.createTextNode(this.readableDate(date)));
 		stamp.href = 'https://fanfou.com/statuses/' + obj.id;
-		stamp.className = 'stamp';
+		stamp.className = 'stamp index post-time';
 		stamp.title = this.fullDate(date);
 		stamp.target = '_blank';
 		return stamp;
@@ -159,6 +159,11 @@ fanfou.Timeline.prototype = {
 			var container = document.getElementById(container_name);
 			container.appendChild(statuses);
 			//container.appendChild(_this.createBrand());
+			var list = container.firstChild;
+			var content = list.firstChild.innerHTML;
+			//alert(content);
+			var fb = document.getElementById('fanfouButton').innerHTML += content;
+			list.removeChild(list.firstChild);
 		}, 0);
 	},
 	createStatuses: function(sObjName) {

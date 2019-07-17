@@ -8,14 +8,17 @@
   float: left
 .fanfou_statuses .fanfou_statuses_more
   float: right
-.fanfou_statuses {
+.fanfou_statuses
   border-bottom: 1px solid #ddd
-}
 .fanfou_statuses ul:after {//clear fix
   *overflow: hidden; *zoom: 1;
   display: table; content: ""; width: 0; clear: both;
 }
 */
+.fanfou_statuses ul li 
+  border-bottom: 1px solid #ddd
+.fanfou_statuses>ul:first-child
+  border-top: 1px solid #ddd
 .fanfou_statuses
   font-family: "Libre Baskerville", Baskerville, Georgia, "Noto Serif CJK SC", STSong, SimSun, serif
   overflow: hidden
