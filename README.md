@@ -11,9 +11,10 @@
 [Demo](http://rapiz.me)
 
 ## Features
+* Fanfou Support
+* Random Quotes
 * Mainly Serif Fonts Used
 * With Transiting Animation
-* Fanfou Support
 * All Article Listed on the Homepage
 
 ## Getting Started
@@ -32,3 +33,7 @@ nav:
 Replace `your_user_name_here` with your Fanfou username in the configuration above and this should work fine.
 ### Navigation Bar
 Each line following `nav:` will create a tab of the navigation bar. Use relative path to set up.
+### Random Quotes
+Change the content of `typography/source/js/utils.js`.
+## TO-DO
+- [ ] Custom quotes using `_data` folder.
