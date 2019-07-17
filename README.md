@@ -8,7 +8,7 @@
 >
 > *lack documents for now*
 
-[Demo](rapiz.me)
+[Demo](http://rapiz.me)
 
 ## Features
 * Mainly Serif Fonts Used
