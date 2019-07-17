@@ -37,3 +37,4 @@ Each line following `nav:` will create a tab of the navigation bar. Use relative
 Change the content of `typography/source/js/utils.js`.
 ## TO-DO
 - [ ] Custom quotes using `_data` folder.
+- [ ] Add random pictures on the homepage.
