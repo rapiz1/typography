@@ -1,5 +1,8 @@
 # Typography
-![last-commit](https://img.shields.io/github/last-commit/rapiz1/typography.svg)![size](https://img.shields.io/github/repo-size/rapiz1/typography.svg)![https://hexo.io](https://img.shields.io/badge/Hexo->%3D3.5-blue.svg)![License-badge](https://img.shields.io/github/license/Rapiz1/typography.svg)
+![last-commit](https://img.shields.io/github/last-commit/rapiz1/typography.svg)
+![size](https://img.shields.io/github/repo-size/rapiz1/typography.svg)
+![https://hexo.io](https://img.shields.io/badge/Hexo->%3D3.5-blue.svg)
+![License-badge](https://img.shields.io/github/license/Rapiz1/typography.svg)
 
 > A tidy hexo theme focused on clean format and elegant reading experience.
 >
