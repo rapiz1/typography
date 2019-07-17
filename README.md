@@ -19,12 +19,16 @@
 ## Getting Started
 1. Clone this project.
 2. Move `typography` into your `themes` folder where your blog has been established.
-3. Edit your `_config.yml` and find the line containing `theme:` and change it to `theme: typography`.
-
+3. Edit your `_config.yml`
+*Your _config.yml should look like this:*
 ```
-cd your_blog/themes
-git clone git@github.com:Rapiz1/typography.git
-cd ..
-vim _config.yml
+theme: typography
+fanfou_username: your_user_name_here
+nav:
+	Home: /
+	Links: /links
 ```
-
+### Fanfou Support
+Replace `your_user_name_here` with your Fanfou username in the configuration above and this should work fine.
+### Navigation Bar
+Each line following `nav:` will create a tab of the navigation bar. Use relative path to set up.

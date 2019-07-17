@@ -1,8 +1,8 @@
 <header id = "header">
     <div id="nav">
 		<div id = "nav-items">
-      <% for (name in site.data.nav) { %>
-        <div class="underline-trans"><a href="<%- url_for(site.data.nav[name]) %>" ><%= name %></a></div>
+      <% for (name in config.nav) { %>
+        <div class="underline-trans"><a href="<%- url_for(config.nav[name]) %>" ><%= name %></a></div>
       <% } %>
 		</ul>
 	</div>
