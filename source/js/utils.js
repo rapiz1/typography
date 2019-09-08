@@ -2,6 +2,7 @@ var quotes = new Array();
 quotes[0] = "我们都是星星。"
 quotes[1] = "是为了什么而流着血，是为了谁而流眼泪。我躲在夜里嘲笑黑，因为没有人能杀死鬼。"
 quotes[2] = '杂 乱 诗 篇';
+quotes[3] = '勇气就是做你害怕的事。如果你不害怕，就谈不上勇气。'
 
 function showSolution(str) {
   foo = document.getElementById(str);
