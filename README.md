@@ -5,8 +5,6 @@
 ![License-badge](https://img.shields.io/github/license/Rapiz1/typography.svg)
 
 > A tidy hexo theme focused on clean format and elegant reading experience.
->
-> *lack documents for now*
 
 [Demo](http://rapiz.me)
 
