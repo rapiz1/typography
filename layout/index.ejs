@@ -1,4 +1,6 @@
-<%- partial('_partial/banner') %>
+<% if (is_home()) { %>
+<%- partial('_partial/banner')%>
+<% } %>
 
 <section class="posts">
 <div class="fanfouReminder seriffont index post underline-trans">
