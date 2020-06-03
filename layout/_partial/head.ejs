@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <head>
-	<%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-	<title><% if (title){ %><%= title %> | <% } %> <%= config.title %> - <%= config.subtitle %></title>
-	<%- css('css/style.css') %>
-	<%- js('js/utils.js') %>
+  <% var title = page.title; if (is_archive()){ title = __('archive_a'); if
+  (is_month()){ title += ': ' + page.year + '/' + page.month; } else if
+  (is_year()){ title += ': ' + page.year; } } else if (is_category()){ title =
+  __('category') + ': ' + page.category; } else if (is_tag()){ title = __('tag')
+  + ': ' + page.tag; } %>
+  <title>
+    <% if (title){ %><%= title %> | <% } %> <%= config.title %> - <%=
+    config.subtitle %>
+  </title>
+  <%- css('css/style.css') %> <%- js('js/utils.js') %>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <% if (theme.mermaid.enable) { %>
+  <script src="https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({ theme: "neutral" });
+    }
+  </script>
+  <% } %>
 </head>
