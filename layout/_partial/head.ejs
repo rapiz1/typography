@@ -11,6 +11,16 @@
   </title>
   <%- css('css/style.css') %> <%- js('js/utils.js') %>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="all">
+  <meta name="author" content="<%= config.author %>">
+  <% var description = config.meta_description_string
+    if (page && page.excerpt) {
+      description += ',' + page.excerpt
+    }
+  %>
+  <meta name="keywords" content="<%= config.meta_keywords_string%>">
+  <meta name="description" content="<%= description %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <% if (theme.mermaid.enable) { %>
   <script src="https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js"></script>
   <script>
