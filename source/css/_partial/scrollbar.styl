@@ -1,0 +1,21 @@
+// This is standard
+body {
+  scrollbar-width: thin;
+  scrollbar-color: gray black;
+}
+
+code {
+  scrollbar-width: thin !important;
+}
+
+// These are tricks
+body::-webkit-scrollbar {
+  //width: 6px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: black;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: grey;    /* color of the scroll thumb */
+  border-radius: 0px;       /* roundness of the scroll thumb */
+}
