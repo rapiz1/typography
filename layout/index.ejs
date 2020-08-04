@@ -24,7 +24,7 @@ fanfou_name="<%=config.fanfou_username%>";fanfou_count=5;fanfou_timeline="user";
     <article class="index post underline-trans">
       <div class="index post-title">
         <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
-        <span class="index post-excerpt"><%- post.excerpt %></p></span>
+        <span class="index post-excerpt"><%= strip_html(post.excerpt) %></span>
       <span class="index post-time"><%- date(post.date, config.data_format) %></span>
         <span class="index post-categories">
           <%- list_categories(post.categories, {

@@ -6,7 +6,7 @@
   </div>
    <div class="post-meta">
          <% if (page.excerpt) {%>
-    <blockquote><%- page.excerpt %></blockquote>
+    <blockquote><%= strip_html(page.excerpt) %></blockquote>
     <% } %>
     <%- toc(page.content, {list_number: false}) %>
     <span class="post-author">By <%= config.author %></span>
