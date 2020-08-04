@@ -14,12 +14,36 @@
   <meta http-equiv="Content-Language" content="zh-cn" /> 
   <meta name="robots" content="all" />
   <meta name="author" content="<%= config.author %>" />
-  <% var description = config.meta_description_string
-    if (page && page.excerpt) {
-      description += ',' + page.excerpt
+  <%
+    let description = config.meta_description_string
+    let keywords = config.meta_keywords_string
+    if (page) {
+      if (page.excerpt) {
+        description += ', ' + strip_html(page.excerpt)
+        page.tags.forEach((e)=> {
+          keywords += ',' + e.toObject().name
+        })
+        page.categories.forEach((e)=> {
+          keywords += ',' + e.toObject().name
+        })
+      }
+      if (page.tag) {
+        description += ',' + page.tag
+      }
+      if (page.category) {
+        description += ',' + page.category
+      }
+      
+      if (page.tag || page.category) {
+        const meta_length = 150
+        page.posts.forEach((e)=>{
+          description += ',' + e.title
+        })
+        description = truncate(description, {length:meta_length})
+      }
     }
   %>
-  <meta name="keywords" content="<%= config.meta_keywords_string%>" />
+  <meta name="keywords" content="<%= keywords %>" />
   <meta name="description" content="<%= description %>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <% if (theme.mermaid.enable) { %>
