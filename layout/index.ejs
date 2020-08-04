@@ -1,6 +1,15 @@
 <% if (is_home()) { %>
 <%- partial('_partial/banner')%>
 <% } %>
+<% if (is_tag()) { %>
+  <h1><%= 'Tag: ' + page.tag %></h1>
+<% } %>
+<% if (is_archive()) { %>
+  <h1><%= page.year %></h1>
+<% } %>
+<% if (is_category()) { %>
+  <h1><%= 'Category: ' + page.category %></h1>
+<% } %>
 
 <section class="posts">
 <div class="fanfouReminder seriffont index post underline-trans">
