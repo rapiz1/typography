@@ -14,6 +14,7 @@
 * Mainly Serif Fonts Used
 * With Transiting Animation
 * All Article Listed on the Homepage
+* Mermaid, MathJax Support
 
 ## Getting Started
 1. Clone this project.
