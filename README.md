@@ -9,12 +9,12 @@
 [Demo](http://rapiz.me)
 
 ## Features
-* Fanfou Support
+* Mermaid, MathJax, Fanfou Support
+* SEO Friendly
+* Self-Adapted Layout
 * Random Quotes
-* Mainly Serif Fonts Used
-* With Transiting Animation
 * All Article Listed on the Homepage
-* Mermaid, MathJax Support
+
 
 ## Getting Started
 1. Clone this project.
