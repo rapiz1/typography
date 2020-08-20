@@ -11,43 +11,47 @@
   </title>
   <%- css('css/style.css') %> <%- js('js/utils.js') %>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Language" content="zh-cn" /> 
-  <meta name="robots" content="all" />
+  <meta name="robots" content="index,follow" />
   <meta name="author" content="<%= config.author %>" />
   <%
-    let description = config.meta_description_string
-    let keywords = config.meta_keywords_string
+    let description = config.title + ',' + config.author + ',' + 
+                      config.description + ',' + config.meta_description_string;
+    let keywords = config.title + ',' + config.author + ',' + config.meta_keywords_string;
     if (page) {
-      if (page.excerpt) {
-        description += ', ' + strip_html(page.excerpt)
-        page.tags.forEach((e)=> {
-          keywords += ',' + e.toObject().name
-        })
-        page.categories.forEach((e)=> {
-          keywords += ',' + e.toObject().name
-        })
+      if (is_post()) {
+        if (page.excerpt) {
+          description += ',' + page.title + ',' + strip_html(page.excerpt);
+        }
+          page.tags.forEach((e)=> {
+            keywords += ',' + e.toObject().name;
+          })
+          page.categories.forEach((e)=> {
+            keywords += ',' + e.toObject().name;
+          })
       }
       if (page.tag) {
-        description += ',' + page.tag
+        description += ',' + page.tag;
+        keywords += ',' + page.tag;
       }
       if (page.category) {
-        description += ',' + page.category
+        description += ',' + page.category;
+        keywords += ',' + page.category;
       }
       
-      if (page.tag || page.category) {
-        const meta_length = 150
+      if (page.posts) {
         page.posts.forEach((e)=>{
-          description += ',' + e.title
+          description += ',' + e.title;
         })
-        description = truncate(description, {length:meta_length})
       }
     }
+    const meta_length = 150;
+    description = truncate(description, {length:meta_length});
   %>
   <meta name="keywords" content="<%= keywords %>" />
   <meta name="description" content="<%= description %>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <% if (theme.mermaid.enable) { %>
-  <script src="https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js"></script>
   <script>
     if (window.mermaid) {
       mermaid.initialize({ theme: "neutral" });
