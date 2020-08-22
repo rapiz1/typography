@@ -9,7 +9,18 @@
     <%- toc(page.content, {list_number: false}) %>
     <span class="post-author">By <%= config.author %></span>
     <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
-  </div>
+    <span class="post-tags">
+      <%- list_tags(page.tags, {
+        show_count: false,
+        class: 'article-tag',
+        style: 'none',
+        separator: ', '
+      }) %>
+      <span class="post-meta-keywords">
+      <%- page.meta_keywords.join(',') %>
+      </span>
+    </span>
+</div>
   <div class="post-content">
     <%- page.more %>
   </div>

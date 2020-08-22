@@ -43,6 +43,10 @@
           description += ',' + e.title;
         })
       }
+
+      if (page.meta_keywords) {
+        keywords += ',' + page.meta_keywords.join(',');
+      }
     }
     const meta_length = 150;
     description = truncate(description, {length:meta_length});
