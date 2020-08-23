@@ -16,9 +16,11 @@
         style: 'none',
         separator: ', '
       }) %>
+      <% if (page.meta_keywords) { %>
       <span class="post-meta-keywords">
       <%- page.meta_keywords.join(',') %>
       </span>
+      <% } %>
     </span>
 </div>
   <div class="post-content">
